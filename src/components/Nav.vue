@@ -8,7 +8,7 @@
 
             <ul class="nav__list">
                 <li class="nav__list-item" v-for="(link, idx) in navLinks" :key="idx">
-                    <a :href="link.url" class="nav__list-link">{{ link.name }}</a>
+                    <router-link :to="`/${link.url}`" class="nav__list-link">{{ link.name }}</router-link>
                 </li>
             </ul>
         </div>
@@ -25,15 +25,15 @@ export default {
             navLinks: [
                 {
                     name: 'услуги',
-                    url: '#services'
+                    url: 'services'
                 },
                 {
                     name: 'кейсы',
-                    url: '#cases'
+                    url: 'cases'
                 },
                 {
                     name: 'fAQ',
-                    url: '#faq'
+                    url: 'faq'
                 }
             ]
         }
@@ -82,6 +82,10 @@ export default {
             transition: .4s;
 
             &:hover {
+                color: var(--main-red);
+            }
+
+            &.router-link-exact-active {
                 color: var(--main-red);
             }
         }

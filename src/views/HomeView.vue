@@ -1,7 +1,5 @@
 <template>
   <img src="@/assets/img/backgroudBlack.png" alt="" class="bg-img">
-
-  <Nav/>
   
   <Header/>
 
@@ -14,7 +12,6 @@ import Header from '@/components/Header.vue'
 export default {
   name: 'Home Page',
   components: {
-    Nav,
     Header
   }
 }

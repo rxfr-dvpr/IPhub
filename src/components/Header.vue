@@ -12,6 +12,12 @@
                 </h1>
 
                 <p class="header__descr-txt">{{ headerTxt }}</p>
+
+                <div class="header__buttons">
+                    <button class="consult-btn">{{ consultBtn }}</button>
+
+                    <router-link to="/services" class="service-link">{{ serviceLink }}</router-link>
+                </div>
             </div>
 
             <img src="@/assets/img/header/header-img.png" alt="" class="header-img">
@@ -26,7 +32,9 @@ export default {
     name: 'Header',
     data() {
         return {
-            headerTxt: 'индивидуальные правовые решения для защиты и охраны ваших нематериальных активов в России и за рубежом'
+            headerTxt: 'индивидуальные правовые решения для защиты и охраны ваших нематериальных активов в России и за рубежом',
+            consultBtn: 'Получить индивидуальную консультацию',
+            serviceLink: 'все услуги'
         }
     }
 }
@@ -78,6 +86,77 @@ export default {
 
             &::first-letter {
                 text-transform: uppercase;
+            }
+        }
+
+        .header__buttons {
+            width: 100%;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-top: 30px;
+
+            .consult-btn {
+                max-width: 300px;
+                width: 100%;
+                background: var(--main-red);
+                font-size: 15px;
+                padding: 25px 20px;
+                border-radius: 100%;
+                border: solid 1px var(--main-red);
+                transition: .4s;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: transparent;
+                    border-radius: 100%;
+                    border: solid 1px var(--primary-color);
+                    opacity: 0;
+                    transition: .4s;
+                    transform: scale(0);
+                }
+
+                &:hover::after {
+                    transform: scale(1) translate(-5px, -2px) rotate(-7deg);
+                    opacity: 1;
+                }
+            }
+
+            .service-link {
+                font-size: 15px;
+                font-weight: 500;
+                color: var(--main-red);
+                border: solid 2px var(--main-red);
+                border-radius: 200%;
+                padding: 10px 22px 11px;
+                position: relative;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+
+                &::after {
+                    content: '⟶';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 30px;
+                    opacity: 0;
+                    transition: .4s;
+                    transform: translateX(10px);
+                }
+
+                &:hover::after {
+                    transform: translateX(18px);
+                    opacity: 1;
+                }
             }
         }
     }

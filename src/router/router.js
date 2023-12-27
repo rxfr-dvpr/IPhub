@@ -9,6 +9,21 @@ const router = createRouter({
       alias: ['/home'],
       component: () => import('@/views/HomeView.vue')
     },
+    {
+      path: '/services',
+      name: 'services',
+      component: () => import('@/views/ServicesView.vue')
+    },
+    {
+      path: '/cases',
+      name: 'cases',
+      component: () => import('@/views/CasesView.vue')
+    },
+    {
+      path: '/faq',
+      name: 'faq',
+      component: () => import('@/views/FaqView.vue')
+    }
   ]
 })
 
