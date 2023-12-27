@@ -32,6 +32,11 @@ button {
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
+    background-image: url('../img/backgroudBlack.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
@@ -63,4 +68,8 @@ html {
 
 .scnd-font {
     font-family: $scndFont;
+}
+
+.dark-bg {
+    background: rgba($color: #0000, $alpha: .9);
 }

@@ -1,18 +1,25 @@
 <template>
-  <img src="@/assets/img/backgroudBlack.png" alt="" class="bg-img">
   
   <Header/>
+
+  <main class="main">
+    <Advantages/>
+  </main>
+
 
 </template>
 
 <script>
-import Nav from '@/components/Nav.vue'
-import Header from '@/components/Header.vue'
+import Header from '@/components/Home/Header.vue'
+import Advantages from '@/components/Home/Advantages.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'Home Page',
   components: {
-    Header
+    Header,
+    Advantages,
+    Footer
   }
 }
 
@@ -20,14 +27,10 @@ export default {
 
 <style lang="scss" scoped>
 
-.bg-img {
+.main {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  object-fit: cover;
+  display: flex;
+  flex-direction: column;
 }
 
 </style>
