@@ -10,6 +10,10 @@ $scndFont: 'STIX Two Text', serif;
     --main-black: #1B1B1B;
 }
 
+img {
+    pointer-events: none;
+}
+
 * {
     margin: 0;
     padding: 0;

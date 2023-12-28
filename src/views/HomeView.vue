@@ -6,6 +6,8 @@
     <Advantages/>
 
     <Services/>
+
+    <Banner/>
   </main>
 
 </template>
@@ -15,6 +17,7 @@ import Header from '@/components/Home/Header.vue'
 import Advantages from '@/components/Home/Advantages.vue'
 import Footer from '@/components/Footer.vue'
 import Services from '@/components/Home/Services.vue'
+import Banner from '@/components/Home/Banner.vue'
 
 export default {
   name: 'Home Page',
@@ -22,6 +25,7 @@ export default {
     Header,
     Advantages,
     Services,
+    Banner,
     Footer
   }
 }
