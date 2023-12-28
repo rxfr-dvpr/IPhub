@@ -16,7 +16,7 @@
                 <div class="header__buttons">
                     <button class="consult-btn">{{ consultBtn }}</button>
 
-                    <router-link to="/services" class="service-link">{{ serviceLink }}</router-link>
+                    <ServicesLink/>
                 </div>
             </div>
 
@@ -27,15 +27,18 @@
 </template>
 
 <script>
+import ServicesLink from '../ServicesLink.vue'
 
 export default {
     name: 'Header',
+    components: {
+        ServicesLink
+    },
     data() {
         return {
             headerImg: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/HomePage%2Fheader-img.png?alt=media&token=df6e8d65-6f7d-4a54-9ed2-1bd5636ed4b2',
             headerTxt: 'индивидуальные правовые решения для защиты и охраны ваших нематериальных активов в России и за рубежом',
             consultBtn: 'Получить индивидуальную консультацию',
-            serviceLink: 'все услуги'
         }
     }
 }
@@ -125,36 +128,6 @@ export default {
 
                 &:hover::after {
                     transform: scale(1) translate(-5px, -2px) rotate(-7deg);
-                    opacity: 1;
-                }
-            }
-
-            .service-link {
-                font-size: 15px;
-                font-weight: 500;
-                color: var(--main-red);
-                border: solid 2px var(--main-red);
-                border-radius: 200%;
-                padding: 10px 22px 11px;
-                position: relative;
-
-                &::first-letter {
-                    text-transform: uppercase;
-                }
-
-                &::after {
-                    content: '⟶';
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    font-size: 30px;
-                    opacity: 0;
-                    transition: .4s;
-                    transform: translateX(10px);
-                }
-
-                &:hover::after {
-                    transform: translateX(18px);
                     opacity: 1;
                 }
             }

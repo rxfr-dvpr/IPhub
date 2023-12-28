@@ -26,7 +26,7 @@ export default {
   background-image: url('./assets/img/backgroudBlack.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
   position: fixed;
   top: 0;
   left: 0;
