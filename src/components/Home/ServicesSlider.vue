@@ -1,12 +1,18 @@
 <template>
-  <swiper class="services-slider" :spaceBetween="20" :slidesPerView="3"  :modules="modules" :navigation="true">
-    <swiper-slide class="services-slider-slide" v-for="(slide, idx) in slides" :key="idx">
-        <span class="arrow-icon"><i class="fal fa-arrow-right"></i></span>
-        <img :src="slide.img" alt="" class="slide-img">
-        <p class="slide-title">{{ slide.title }}</p>
-        <p class="slide-txt">{{ slide.txt }}</p>
-    </swiper-slide>
-  </swiper>
+    <swiper class="services-slider" :spaceBetween="20" :slidesPerView="3"  :modules="modules" :navigation="{prevEl:'.swiper-btn.prev', nextEl:'.swiper-btn.next'}">
+        <swiper-slide class="services-slider-slide" v-for="(slide, idx) in slides" :key="idx">
+            <span class="arrow-icon"><i class="fal fa-arrow-right"></i></span>
+            <img :src="slide.img" alt="" class="slide-img">
+            <p class="slide-title">{{ slide.title }}</p>
+            <p class="slide-txt">{{ slide.txt }}</p>
+        </swiper-slide>
+    </swiper>
+
+    <div class="swiper-buttons">
+        <button class="swiper-btn prev"><span class="btn-icon"><i class="fal fa-long-arrow-left"></i></span></button>
+        <button class="swiper-btn next"><span class="btn-icon"><i class="fal fa-long-arrow-right"></i></span></button>
+    </div>
+
 </template>
 
 <script>
@@ -145,6 +151,54 @@ export default {
                 height: 100%;
                 opacity: 1;
             }
+        }
+    }
+}
+
+.swiper-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .swiper-btn {
+        min-width: 50px;
+        max-width: 50px;
+        width: 100%;
+        min-height: 50px;
+        max-height: 50px;
+        height: 100%;
+        background: transparent;
+        border-radius: 50%;
+        border: solid 1px var(--main-red);
+        position: relative;
+        font-size: 25px;
+
+        .btn-icon {
+            position: absolute;
+            top: 20%;
+            transition: .4s;
+
+            i {
+                color: var(--main-red);
+            }
+        }
+
+        &.prev .btn-icon {
+            left: 13px;
+        }
+
+        &.next .btn-icon {
+            right: 13px;
+        }
+
+        &:not(.swiper-button-disabled):hover.prev .btn-icon {  
+            left: -15px;
+        }
+
+        &:not(.swiper-button-disabled):hover.next .btn-icon {
+            right: -15px;
         }
     }
 }
