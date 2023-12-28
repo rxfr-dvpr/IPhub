@@ -8,6 +8,8 @@
 
                 <span class="srvc-link"><ServicesLink/></span>
             </div>
+
+            <ServicesSlider/>
         </div>
     </div>
   </section>
@@ -15,11 +17,13 @@
 
 <script>
 import ServicesLink from '../ServicesLink.vue'
+import ServicesSlider from './ServicesSlider.vue'
 
 export default {
     name: 'Services Section',
     components: {
-        ServicesLink
+        ServicesLink,
+        ServicesSlider
     },
     data() {
         return {
