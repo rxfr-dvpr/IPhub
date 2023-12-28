@@ -6,7 +6,6 @@
     <Advantages/>
   </main>
 
-
 </template>
 
 <script>
