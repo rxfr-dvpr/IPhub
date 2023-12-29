@@ -6,15 +6,21 @@
                 <h3 class="team__descr-title all-title">{{ descr.title }}</h3>
                 <p class="team__descr-txt all-txt">{{ descr.txt }}</p>
             </div>
+
+            <TeamSlider/>
         </div>
     </div>
   </section>
 </template>
 
 <script>
+import TeamSlider from './TeamSlider.vue'
 
 export default {
     name: 'Team Section',
+    components: {
+        TeamSlider
+    },
     data() {
         return {
             descr: {
