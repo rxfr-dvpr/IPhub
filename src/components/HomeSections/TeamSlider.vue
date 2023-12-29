@@ -1,6 +1,6 @@
 <template>
     <swiper class="team__slider" :spaceBetween="20" :slidesPerView="4"  :modules="modules" 
-    :navigation="{prevEl:'.swiper-btn.prev', nextEl:'.swiper-btn.next'}">
+    :navigation="{prevEl:'.team-swiper-btn.prev', nextEl:'.team-swiper-btn.next'}">
         <swiper-slide class="team__slider-slide" v-for="(slide, idx) in slides" :key="idx">
 
             <div class="slide-img-box">
@@ -15,9 +15,9 @@
         </swiper-slide>
     </swiper>
 
-    <div class="swiper-buttons">
-        <button class="swiper-btn prev"><span class="btn-icon"><i class="fal fa-long-arrow-left"></i></span></button>
-        <button class="swiper-btn next"><span class="btn-icon"><i class="fal fa-long-arrow-right"></i></span></button>
+    <div class="team-swiper-btns">
+        <button class="team-swiper-btn prev"><span class="btn-icon"><i class="fal fa-long-arrow-left"></i></span></button>
+        <button class="team-swiper-btn next"><span class="btn-icon"><i class="fal fa-long-arrow-right"></i></span></button>
     </div>
 </template>
 
@@ -137,14 +137,14 @@ export default {
     }
 }
 
-.swiper-buttons {
+.team-swiper-btns {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 
-    .swiper-btn {
+    .team-swiper-btn {
         min-width: 50px;
         max-width: 50px;
         width: 100%;

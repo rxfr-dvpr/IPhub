@@ -1,5 +1,6 @@
 <template>
-    <swiper class="services-slider" :spaceBetween="20" :slidesPerView="3"  :modules="modules" :navigation="{prevEl:'.swiper-btn.prev', nextEl:'.swiper-btn.next'}">
+    <swiper class="services-slider" :spaceBetween="20" :slidesPerView="3"  :modules="modules" 
+    :navigation="{prevEl:'.services-swiper-btn.prev', nextEl:'.services-swiper-btn.next'}">
         <swiper-slide class="services-slider-slide" v-for="(slide, idx) in slides" :key="idx">
             <span class="arrow-icon"><i class="fal fa-arrow-right"></i></span>
             <img :src="slide.img" alt="" class="slide-img">
@@ -8,9 +9,9 @@
         </swiper-slide>
     </swiper>
 
-    <div class="swiper-buttons">
-        <button class="swiper-btn prev"><span class="btn-icon"><i class="fal fa-long-arrow-left"></i></span></button>
-        <button class="swiper-btn next"><span class="btn-icon"><i class="fal fa-long-arrow-right"></i></span></button>
+    <div class="services-swiper-btns">
+        <button class="services-swiper-btn prev"><span class="btn-icon"><i class="fal fa-long-arrow-left"></i></span></button>
+        <button class="services-swiper-btn next"><span class="btn-icon"><i class="fal fa-long-arrow-right"></i></span></button>
     </div>
 
 </template>
@@ -155,14 +156,14 @@ export default {
     }
 }
 
-.swiper-buttons {
+.services-swiper-btns {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 
-    .swiper-btn {
+    .services-swiper-btn {
         min-width: 50px;
         max-width: 50px;
         width: 100%;

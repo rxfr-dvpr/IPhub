@@ -1,5 +1,5 @@
 <template>
-    <swiper class="case-slider" :spaceBetween="20" :slidesPerView="2"  :modules="modules" :navigation="{prevEl:'.swiper-btn.prev', nextEl:'.swiper-btn.next'}">
+    <swiper class="case-slider" :spaceBetween="20" :slidesPerView="2"  :modules="modules" :navigation="{prevEl:'.case-swiper-btn.prev', nextEl:'.case-swiper-btn.next'}">
         <swiper-slide class="case-slider-slide" v-for="(slide, idx) in slides" :key="idx">
 
             <div class="slide-img-box">
@@ -16,9 +16,9 @@
         </swiper-slide>
     </swiper>
 
-    <div class="swiper-buttons">
-        <button class="swiper-btn prev"><span class="btn-icon"><i class="fal fa-long-arrow-left"></i></span></button>
-        <button class="swiper-btn next"><span class="btn-icon"><i class="fal fa-long-arrow-right"></i></span></button>
+    <div class="case-swiper-btns">
+        <button class="case-swiper-btn prev"><span class="btn-icon"><i class="fal fa-long-arrow-left"></i></span></button>
+        <button class="case-swiper-btn next"><span class="btn-icon"><i class="fal fa-long-arrow-right"></i></span></button>
     </div>
 </template>
 
@@ -129,14 +129,14 @@ export default {
     }
 }
 
-.swiper-buttons {
+.case-swiper-btns {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 
-    .swiper-btn {
+    .case-swiper-btn {
         min-width: 50px;
         max-width: 50px;
         width: 100%;
