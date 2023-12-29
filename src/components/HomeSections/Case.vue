@@ -10,6 +10,7 @@
                 <span class="case-link"><ServicesLink/></span>
             </div>
 
+            <CaseSlider/>
         </div>
     </div>
   </section>
@@ -17,11 +18,13 @@
 
 <script>
 import ServicesLink from '../ServicesLink.vue'
+import CaseSlider from './CaseSlider.vue'
 
 export default {
     name: 'Case Section',
     components: {
-        ServicesLink
+        ServicesLink,
+        CaseSlider
     },
     data() {
         return {
