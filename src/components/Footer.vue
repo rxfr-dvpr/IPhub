@@ -34,6 +34,20 @@
             </li>
           </ul>
         </div>
+
+        <div class="footer__bottom">
+          <p class="footer__bottom-copyright all-txt">
+            {{ `© ${new Date().getFullYear()} ${footerBottom.copyright}` }}
+          </p>
+
+          <p class="footer__bottom-oferta all-txt">
+            {{ footerBottom.oferta }}
+          </p>
+
+          <p class="footer__bottom-agreement all-txt">
+            {{ footerBottom.agreement }}
+          </p>
+        </div>
       </div>
     </div>
   </footer>
@@ -106,6 +120,11 @@ export default {
             ]
           },
         ]
+      },
+      footerBottom: {
+        copyright: 'IPhub. Все права защищены.',
+        oferta: 'Публичная оферта',
+        agreement: 'Пользовательское соглашение'
       }
     }
   }
@@ -132,7 +151,7 @@ export default {
     gap: 35px;
 
     .footer-brand {
-      max-width: 740px;
+      max-width: 720px;
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -186,7 +205,22 @@ export default {
         &:hover {
           color: var(--main-red);
         }
+
+        &.router-link-exact-active {
+          color: var(--main-red);
+        }
       }
+    }
+  }
+
+  .footer__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-oferta, &-agreement {
+      color: var(--primary-color);
     }
   }
 }
