@@ -1,5 +1,5 @@
 <template>
-  <section class="services__section">
+  <section class="services__section light-bg">
     <div class="container">
         <div class="row">
             <div class="services__descr">
@@ -42,7 +42,6 @@ export default {
 .services__section {
     width: 100%;
     padding: 160px 0;
-    background: rgba($color: #fff, $alpha: .7);
 
     .row {
         flex-direction: column;

@@ -74,6 +74,10 @@ html {
     background: rgba($color: #0000, $alpha: .9);
 }
 
+.light-bg {
+    background: rgba($color: #fff, $alpha: .7);
+}
+
 .all-title {
     font-family: $scndFont !important;
     font-size: 38px;

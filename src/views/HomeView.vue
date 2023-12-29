@@ -9,6 +9,8 @@
 
     <Case/>
 
+    <Team/>
+
     <Banner/>
   </main>
 
@@ -21,6 +23,7 @@ import Footer from '@/components/Footer.vue'
 import Services from '@/components/HomeSections/Services.vue'
 import Banner from '@/components/HomeSections/Banner.vue'
 import Case from '@/components/HomeSections/Case.vue'
+import Team from '@/components/HomeSections/Team.vue'
 
 export default {
   name: 'Home Page',
@@ -29,6 +32,7 @@ export default {
     Advantages,
     Services,
     Case,
+    Team,
     Banner,
     Footer
   }
