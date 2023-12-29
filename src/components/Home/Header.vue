@@ -14,8 +14,8 @@
                 <p class="header__descr-txt">{{ headerTxt }}</p>
 
                 <div class="header__buttons">
-                    <button class="consult-btn">{{ consultBtn }}</button>
-
+                    <ConsultBtn/>
+                    
                     <ServicesLink/>
                 </div>
             </div>
@@ -27,18 +27,19 @@
 </template>
 
 <script>
+import ConsultBtn from '../ConsultBtn.vue'
 import ServicesLink from '../ServicesLink.vue'
 
 export default {
     name: 'Header',
     components: {
-        ServicesLink
+        ServicesLink,
+        ConsultBtn
     },
     data() {
         return {
             headerImg: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/HomePage%2Fheader-img.png?alt=media&token=df6e8d65-6f7d-4a54-9ed2-1bd5636ed4b2',
             headerTxt: 'индивидуальные правовые решения для защиты и охраны ваших нематериальных активов в России и за рубежом',
-            consultBtn: 'Получить индивидуальную консультацию',
         }
     }
 }
@@ -98,39 +99,6 @@ export default {
             gap: 40px;
             align-items: center;
             margin-top: 30px;
-
-            .consult-btn {
-                max-width: 300px;
-                width: 100%;
-                background: var(--main-red);
-                font-size: 15px;
-                padding: 25px 20px;
-                border-radius: 100%;
-                border: solid 1px var(--main-red);
-                transition: .4s;
-                position: relative;
-
-                &::after {
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    background: transparent;
-                    border-radius: 100%;
-                    border: solid 1px var(--primary-color);
-                    opacity: 0;
-                    transition: .4s;
-                    transform: scale(0);
-                }
-
-                &:hover::after {
-                    transform: scale(1) translate(-5px, -2px) rotate(-7deg);
-                    opacity: 1;
-                }
-            }
         }
     }
 

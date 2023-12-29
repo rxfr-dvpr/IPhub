@@ -5,6 +5,8 @@
             <div class="banner__descr">
                 <h3 class="banner__descr-title all-title">{{ descr.title }}</h3>
                 <p class="banner__descr-txt all-txt">{{ descr.txt }}</p>
+
+                <ConsultBtn/>
             </div>
 
             <img :src="bannerImg" alt="" class="banner-img">
@@ -14,9 +16,13 @@
 </template>
 
 <script>
+import ConsultBtn from '../ConsultBtn.vue'
 
 export default {
     name: 'Banner Section',
+    components: {
+        ConsultBtn
+    },
     data() {
         return {
             descr: {
