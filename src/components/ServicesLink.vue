@@ -19,6 +19,7 @@ export default {
 
 .service-link {
     max-width: max-content;
+    width: 100%;
     font-size: 15px;
     color: var(--main-red);
     font-weight: 500;
