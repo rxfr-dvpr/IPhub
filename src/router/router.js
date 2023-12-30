@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/faq',
       name: 'faq',
       component: () => import('@/views/FaqView.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: () => import('@/views/ErrorView.vue')
     }
   ]
 })
