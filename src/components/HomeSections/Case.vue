@@ -4,8 +4,8 @@
         <div class="row">
 
             <div class="case__descr">
-                <h3 class="case__descr-title all-title">{{ descr.title }}</h3>
-                <p class="case__descr-txt all-txt">{{ descr.txt }}</p>
+                <h3 class="case__descr-title all-title">{{ customTitle }}</h3>
+                <p class="case__descr-txt all-txt" v-if="customTxt">{{ customTxt }}</p>
 
                 <span class="case-link"><ServicesLink/></span>
             </div>
@@ -26,12 +26,14 @@ export default {
         ServicesLink,
         CaseSlider
     },
-    data() {
-        return {
-            descr: {
-                title: 'реализованные кейсы',
-                txt: 'Наши реальные истории о том, как мы помогали своим клиентам регистрировать товарные знаки и оформлять права на объекты интеллектуальной собственности',
-            }
+    props: {
+        customTitle: {
+            type: String,
+            default: 'реализованные кейсы'
+        },
+        customTxt: {
+            type: String,
+            default: ''
         }
     }
 }

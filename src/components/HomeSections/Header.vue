@@ -5,13 +5,9 @@
             <div class="header__descr">
                 <span class="header__descr-subtitle">ваш ip партнер</span>
 
-                <h1 class="header__descr-title scnd-font">
-                    <span class="red-quote">‘</span>
-                    Интеллектуальная <span class="itlc-wrd">собственность</span>
-                    <span class="red-quote">’</span>
-                </h1>
+                <h1 class="header__descr-title scnd-font" v-html="customTitle"></h1>
 
-                <p class="header__descr-txt">{{ headerTxt }}</p>
+                <p class="header__descr-txt">{{ customTxt }}</p>
 
                 <div class="header__buttons">
                     <ConsultBtn/>
@@ -20,7 +16,7 @@
                 </div>
             </div>
 
-            <img :src="headerImg" alt="" class="header-img">
+            <img :src="customImg" alt="" class="header-img">
         </div>
     </div>
   </header>
@@ -36,10 +32,18 @@ export default {
         ServicesLink,
         ConsultBtn
     },
-    data() {
-        return {
-            headerImg: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/HomePage%2Fheader-img.png?alt=media&token=df6e8d65-6f7d-4a54-9ed2-1bd5636ed4b2',
-            headerTxt: 'индивидуальные правовые решения для защиты и охраны ваших нематериальных активов в России и за рубежом',
+    props: {
+        customTitle: {
+            type: String,
+            default: '<span class="red-quote">‘</span> Интеллектуальная <span class="itlc-wrd">собственность</span> <span class="red-quote">’</span>'
+        },
+        customTxt: {
+            type: String,
+            default: 'индивидуальные правовые решения для защиты и охраны ваших нематериальных активов в России и за рубежом'
+        },
+        customImg: {
+            type: String,
+            default: "https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/HomePage%2Fheader-img.png?alt=media&token=df6e8d65-6f7d-4a54-9ed2-1bd5636ed4b2"
         }
     }
 }
