@@ -77,15 +77,6 @@ export default {
         &-title {
             font-size: 55px;
             font-weight: 500;
-            
-            .red-quote {
-                color: var(--main-red);
-            }
-
-            .itlc-wrd {
-                font-family: var(--scnd-font);
-                font-style: italic;
-            }
         }
 
         &-txt {

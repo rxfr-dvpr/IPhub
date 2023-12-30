@@ -7,6 +7,8 @@
 
     <Services/>
 
+    <Test/>
+    
     <Case :customTxt="caseTxt"/>
 
     <Team/>
@@ -24,6 +26,7 @@ import Services from '@/components/HomeSections/Services.vue'
 import Banner from '@/components/HomeSections/Banner.vue'
 import Case from '@/components/HomeSections/Case.vue'
 import Team from '@/components/HomeSections/Team.vue'
+import Test from '@/components/HomeSections/Test.vue'
 
 export default {
   name: 'Home Page',
@@ -31,6 +34,7 @@ export default {
     Header,
     Advantages,
     Services,
+    Test,
     Case,
     Team,
     Banner,
