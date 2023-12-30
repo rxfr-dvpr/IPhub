@@ -1,17 +1,21 @@
 <template>
     <Header :customImg="headerImg" :customTitle="headerTitle" :customTxt="headerTxt"/>
     
+    <Test/>
+    
     <Banner :customBannerImg="bannerImg"/>
 </template>
 
 <script>
 import Header from '@/components/HomeSections/Header.vue'
 import Banner from '@/components/HomeSections/Banner.vue'
+import Test from '@/components/HomeSections/Test.vue'
 
 export default {
     name: 'Services View',
     components: {
         Header,
+        Test,
         Banner
     },
     data() {

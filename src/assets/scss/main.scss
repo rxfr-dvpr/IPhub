@@ -80,7 +80,7 @@ html {
 
 .all-title {
     font-family: $scndFont !important;
-    font-size: 38px;
+    font-size: calc(34px + 4 * (100vw / 1920));
     font-weight: 400;
 
     &::first-letter {
@@ -90,10 +90,30 @@ html {
 
 .all-txt {
     color: var(--main-gray);
-    font-size: 15px;
+    font-size: calc(14px + 1 * (100vw / 1920));
 
     &::first-letter {
         text-transform: uppercase;
+    }
+}
+
+@media (min-width: 1920px) {
+    .all-title {
+        font-size: 38px !important;
+    }
+
+    .all-txt {
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .all-title {
+        font-size: calc(34px + (4 + 4 * 0.7) * ((100vw - 320px)/ 1920)) !important;
+    }
+
+    .all-txt {
+        font-size: calc(14px + (1 + 1 * 0.7) * ((100vw - 320px)/ 1920)) !important;
     }
 }
 
