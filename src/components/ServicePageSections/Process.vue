@@ -28,6 +28,21 @@
                     <p class="step-name all-txt">{{ step.name }}</p>
                 </div>
             </div>
+
+            <div class="process__content">
+                <div class="process__content-info">
+                    <ul class="process-info-list" v-for="(list, idx) in infoList" :key="idx"
+                    :class="{'first': idx == 0}">
+                        <p class="list-title frstUpper">{{ list.title }}</p>
+
+                        <li class="list-item all-txt" v-for="item in list.list" :key="item">
+                            {{ item.txt }}
+                        </li>
+                    </ul>
+                </div>
+
+                <img :src="processInfoImg" alt="" class="process__content-img">
+            </div>
         </div>
     </div>
   </section>
@@ -65,7 +80,29 @@ export default {
                     active: false
                 },
             ],
-            stepIcon: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/ServicesPage%2FProcessSection%2Fgr-arrow.svg?alt=media&token=ff0acd1b-cda6-4a93-a8e0-280ad285e5e7'
+            stepIcon: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/ServicesPage%2FProcessSection%2Fgr-arrow.svg?alt=media&token=ff0acd1b-cda6-4a93-a8e0-280ad285e5e7',
+            infoList: [
+                {
+                    title: 'Предварительное обсуждение',
+                    list: [
+                        {
+                            txt: 'Проверка товарного знака на охраноспособность, тождество и сходство в отношении интересующих товаров / услуг.'
+                        },
+                        {
+                            txt: 'Подбор классов МКТУ'
+                        }
+                    ]
+                },
+                {
+                    title: 'Результаты этапа',
+                    list: [
+                        {
+                            txt: 'вы получаете официальное уведомление (подтверждение) от Роспатента о подаче заявки'
+                        }
+                    ]
+                },
+            ],
+            processInfoImg: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/ServicesPage%2FProcessSection%2Fprocess-info-img.png?alt=media&token=15753c21-a244-4e23-ab47-ffb373c15a33'
         }
     },
     methods: {
@@ -222,6 +259,45 @@ export default {
             }
         }
     }
+
+    .process__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &-info {
+            max-width: 700px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+
+            .process-info-list {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 5px;
+
+                .list-title {
+                    font-size: 18px;
+                }
+
+                &.first {
+                    list-style: disc !important;
+                }
+            }
+        }
+
+        &-img {
+            max-width: 390px;
+            width: 100%;
+            display: block;
+        }
+    }
+
 }
 
 </style>

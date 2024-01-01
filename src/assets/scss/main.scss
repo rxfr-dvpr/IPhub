@@ -71,6 +71,12 @@ html {
     font-family: $scndFont;
 }
 
+.frstUpper {
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
 .dark-bg {
     background: rgba($color: #0000, $alpha: .9);
 }
