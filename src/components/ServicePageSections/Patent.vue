@@ -78,7 +78,9 @@ export default {
 
                 .item-num {
                     font-size: 65px;
-                    background: -webkit-linear-gradient(#DA4533, #DA453300);
+                    font-weight: 900;
+                    background: linear-gradient(90deg, #DA4533 0%, rgba(218, 69, 51, 0.00) 100%);
+                    background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     font-family: var(--scnd-font) !important; 
