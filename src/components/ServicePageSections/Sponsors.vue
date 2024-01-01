@@ -28,22 +28,22 @@ export default {
         return {
             slides: [
                 {
-                    img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/HomePage%2FAdvantagesSection%2Fbetcity.svg?alt=media&token=b7d903bf-c17e-40d5-9fe1-ad605cfa38ed'
+                    img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/ServicesPage%2FSponsorsSection%2Fbetcity.svg?alt=media&token=19417836-68f4-4319-90c8-5da9eb3ae35f'
                 },
                 {
-                    img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/HomePage%2FAdvantagesSection%2Fdeneb.svg?alt=media&token=657729dc-198f-4e20-8e5c-389b363f9779'
+                    img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/ServicesPage%2FSponsorsSection%2Fdeneb.svg?alt=media&token=e3f8ecdf-2cbe-4556-9a49-bb42011a8874'
                 },
                 {
-                    img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/HomePage%2FAdvantagesSection%2Fdepot.svg?alt=media&token=bc034df6-e032-4103-bde2-ca0445ccf1f6'
+                    img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/ServicesPage%2FSponsorsSection%2Fdepot.svg?alt=media&token=f5ea0f56-e353-4c50-b654-ce5f339f7f74'
                 },
                 {
-                    img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/HomePage%2FAdvantagesSection%2Ffish.svg?alt=media&token=ad13ad6b-e756-4fab-8167-bacf54909d20'
+                    img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/ServicesPage%2FSponsorsSection%2Ffish.svg?alt=media&token=3c5fae96-d845-49f3-9288-2385b0c6e23d'
                 },
                 {
-                    img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/HomePage%2FAdvantagesSection%2Fmetrafraks.svg?alt=media&token=6c7f3ba3-89d3-477f-bf19-17261245db03'
+                    img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/ServicesPage%2FSponsorsSection%2Fmetafraks.svg?alt=media&token=079d0d07-5ccb-4724-b8cd-a3b6ee587ac8'
                 },
                 {
-                    img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/HomePage%2FAdvantagesSection%2Fmone.svg?alt=media&token=8bc2c21f-1f9c-4b48-8a67-954cf6f31122'
+                    img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/ServicesPage%2FSponsorsSection%2Fmone.svg?alt=media&token=b80b7c3c-0ec4-4ea4-9eec-0290dd3761b5'
                 },
             ]
         }
@@ -60,6 +60,29 @@ export default {
 
     .sponsors-swiper {
         width: 100%;
+
+        &-slide {
+            max-width: 400px;
+            width: 100%;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 20px;
+            display: grid;
+            place-items: center;
+
+            .sponsors-img {
+                max-width: max-content;
+                width: 100%;
+                opacity: .5;
+                transition: .4s;
+            }
+
+            &:hover {
+                .sponsors-img {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
 
