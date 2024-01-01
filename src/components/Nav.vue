@@ -6,6 +6,11 @@
                 <img src="@/assets/img/logo.svg" alt="" class="logo-img">
             </router-link>
 
+            <div class="nav__contacts">
+                <a href="tel:+998998173066" class="nav__contacts-num all-txt">+998 (99) 817-30-66</a>
+                <button class="get-consult all-txt">{{ getConsult }}</button>
+            </div>
+
             <ul class="nav__list">
                 <li class="nav__list-item" v-for="(link, idx) in navLinks" :key="idx">
                     <router-link :to="`/${link.url}`" class="nav__list-link">{{ link.name }}</router-link>
@@ -35,7 +40,8 @@ export default {
                     name: 'fAQ',
                     url: 'faq'
                 }
-            ]
+            ],
+            getConsult: 'Получить консультацию'
         }
     }
 }
@@ -66,6 +72,29 @@ export default {
             width: 100%;
             display: block;
             pointer-events: none;
+        }
+    }
+
+    .nav__contacts {
+        max-width: max-content;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        &-num {
+            color: var(--primary-color);
+            transition: .4s;
+
+            &:hover {
+                color: var(--main-red);
+            }
+        }
+
+        .get-consult {
+            color: var(--main-red);
+            background: transparent;
+            border: 0;
         }
     }
 
