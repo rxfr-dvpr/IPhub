@@ -5,6 +5,8 @@
         <Sponsors/>
         
         <Patent/>
+
+        <Info/>
         
         <Test/>
 
@@ -19,6 +21,7 @@ import Banner from '@/components/HomeSections/Banner.vue'
 import Test from '@/components/HomeSections/Test.vue'
 import Sponsors from '@/components/ServicePageSections/Sponsors.vue'
 import Patent from '@/components/ServicePageSections/Patent.vue'
+import Info from '@/components/ServicePageSections/Info.vue'
 
 export default {
     name: 'Services View',
@@ -26,6 +29,7 @@ export default {
         Header,
         Sponsors,
         Patent,
+        Info,
         Test,
         Banner
     },
