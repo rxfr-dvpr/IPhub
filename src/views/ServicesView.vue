@@ -4,6 +4,8 @@
     <main class="main">
         <Sponsors/>
         
+        <Patent/>
+        
         <Test/>
 
         <Banner :customBannerImg="bannerImg"/>
@@ -16,12 +18,14 @@ import Header from '@/components/HomeSections/Header.vue'
 import Banner from '@/components/HomeSections/Banner.vue'
 import Test from '@/components/HomeSections/Test.vue'
 import Sponsors from '@/components/ServicePageSections/Sponsors.vue'
+import Patent from '@/components/ServicePageSections/Patent.vue'
 
 export default {
     name: 'Services View',
     components: {
         Header,
         Sponsors,
+        Patent,
         Test,
         Banner
     },
