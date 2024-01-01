@@ -1,20 +1,27 @@
 <template>
     <Header :customImg="headerImg" :customTitle="headerTitle" :customTxt="headerTxt"/>
     
-    <Test/>
+    <main class="main">
+        <Sponsors/>
+        
+        <Test/>
+
+        <Banner :customBannerImg="bannerImg"/>
+    </main>
     
-    <Banner :customBannerImg="bannerImg"/>
 </template>
 
 <script>
 import Header from '@/components/HomeSections/Header.vue'
 import Banner from '@/components/HomeSections/Banner.vue'
 import Test from '@/components/HomeSections/Test.vue'
+import Sponsors from '@/components/ServicePageSections/Sponsors.vue'
 
 export default {
     name: 'Services View',
     components: {
         Header,
+        Sponsors,
         Test,
         Banner
     },
@@ -31,5 +38,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 </style>
