@@ -42,6 +42,8 @@
                 </div>
             </div>
         </div>
+
+        <img :src="testBorderImg" alt="" class="test-img" v-show="imgVisible">
     </div>
   </section>
 </template>
@@ -58,6 +60,10 @@ export default {
         customTxt: {
             type: String,
             default: 'пройдите квиз, чтобы выбрать оптимальное решение для Вашей задачи'
+        },
+        imgVisible: {
+            type: Boolean,
+            default: false
         }
     },
     data() {
@@ -188,7 +194,8 @@ export default {
                   ],
                   showen: false
                 }
-            ] 
+            ],
+            testBorderImg: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/HomePage%2FTestSection%2Ftest-img.png?alt=media&token=20e66049-a57c-4854-a343-ef5651b5980f'
         }
     },
     methods: {
@@ -213,7 +220,7 @@ export default {
               this.testCards[idx].showen = false
               this.testCards[idx + 1].showen = true 
             }
-        },
+        }
     }
 }
 
@@ -434,6 +441,21 @@ export default {
                 }
             }
         }
+    }
+
+    .test-img {
+        max-width: 345px;
+        width: 100%;
+        position: absolute;
+        top: -30%;
+        right: 0;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 1100px) {
+    .test-img {
+        visibility: visible !important;
     }
 }
 

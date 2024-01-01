@@ -8,7 +8,9 @@
 
         <Info/>
         
-        <Test/>
+        <Test :imgVisible="true"/>
+
+        <Process/>
 
         <Banner :customBannerImg="bannerImg"/>
     </main>
@@ -22,6 +24,7 @@ import Test from '@/components/HomeSections/Test.vue'
 import Sponsors from '@/components/ServicePageSections/Sponsors.vue'
 import Patent from '@/components/ServicePageSections/Patent.vue'
 import Info from '@/components/ServicePageSections/Info.vue'
+import Process from '@/components/ServicePageSections/Process.vue'
 
 export default {
     name: 'Services View',
@@ -31,6 +34,7 @@ export default {
         Patent,
         Info,
         Test,
+        Process,
         Banner
     },
     data() {
