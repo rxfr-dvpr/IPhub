@@ -59,6 +59,7 @@ export default {
     .row {
         justify-content: space-between;
         align-items: center;
+        flex-wrap: unset;
     }
 
     .header__descr {
@@ -74,12 +75,13 @@ export default {
         }
 
         &-title {
-            font-size: 55px;
+            font-size: calc(25px + 30 * (100vw / 1920));
             font-weight: 500;
+            
         }
 
         &-txt {
-            font-size: 18px;
+            font-size: calc(14px + 4 * (100vw / 1920));
             color: var(--main-gray);
 
             &::first-letter {
@@ -90,7 +92,8 @@ export default {
         .header__buttons {
             width: 100%;
             display: flex;
-            gap: 40px;
+            column-gap: 40px;
+            row-gap: 20px;
             align-items: center;
             margin-top: 30px;
         }
@@ -101,6 +104,49 @@ export default {
         width: 100%;
         display: block;
         pointer-events: none;
+    }
+}
+
+@media (min-width: 1920px) {
+    .header__descr {
+        &-title {
+            font-size: 55px !important;
+        }
+
+        &-txt {
+            font-size: 18px !important;
+        }
+    }
+}
+
+@media (max-width: 1110px) {
+    .header-img {
+        max-width: 390px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .header__descr {
+        max-width: 465px !important;
+    }
+}
+
+@media (max-width: 868px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .header__descr {
+        align-items: center;
+        text-align: center;
+    }
+
+    .header__buttons {
+        flex-direction: column;
+    }
+
+    .header-img {
+        display: none !important;
     }
 }
 

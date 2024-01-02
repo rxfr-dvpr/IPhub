@@ -229,6 +229,14 @@ export default {
   }
 }
 
+@media (min-width: 1920px) {
+  .footer__list {
+    &-link {
+      font-size: 16px !important;
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .footer {
     padding: 50px 0 40px;
