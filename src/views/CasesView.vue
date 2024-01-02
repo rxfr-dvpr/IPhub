@@ -3,7 +3,9 @@
 
     <main class="main">
         <About/>
-        
+
+        <Tasks/>
+
         <Case :customTitle="caseTitle"/>
 
         <Banner :customBannerImg="bannerIMG"/>
@@ -16,12 +18,14 @@ import Banner from '@/components/HomeSections/Banner.vue'
 import Case from '@/components/HomeSections/Case.vue'
 import CasesHeader from '@/components/CasesPageSections/CasesHeader.vue'
 import About from '@/components/CasesPageSections/About.vue'
+import Tasks from '@/components/CasesPageSections/Tasks.vue'
 
 export default {
     name: 'Cases View',
     components: {
         CasesHeader,
         About,
+        Tasks,
         Banner,
         Case
     },
