@@ -3,13 +3,12 @@
     <div class="container">
       <div class="row">
         <div class="header__descr">
-          <span class="header__descr-subtitle">ваш ip партнер</span>
+          <span class="header__descr-subtitle">товарный знак</span>
 
           <h3 class="header__descr-title all-title">{{ descr.title }}</h3>
 
           <p class="header__descr-txt all-txt">{{ descr.txt }}</p>
         </div>
-
 
         <img :src="caseImg" alt="" class="cases-header-img">
       </div>

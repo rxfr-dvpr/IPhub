@@ -46,7 +46,7 @@ export default {
 .banner__section {
     width: 100%;
     background: var(--main-red);
-    padding: 20px 0 60px;
+    padding: 50px 0;
 
     .row {
         justify-content: space-between;
@@ -64,6 +64,12 @@ export default {
             color: var(--primary-color);
             opacity: .75;
         }
+    }
+
+
+    .banner-img {
+        max-width: max-content;
+        width: 100%;
     }
 }
 

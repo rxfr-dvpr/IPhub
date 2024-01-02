@@ -104,6 +104,14 @@ html {
     }
 }
 
+.sm-title {
+    font-size: calc(16px + 8 * (100vw / 1920));
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
 @media (min-width: 1920px) {
     .all-title {
         font-size: 38px !important;
@@ -111,6 +119,10 @@ html {
 
     .all-txt {
         font-size: 15px !important;
+    }
+
+    .sm-title {
+        font-size: 24px !important;
     }
 }
 
@@ -121,6 +133,10 @@ html {
 
     .all-txt {
         font-size: calc(14px + (1 + 1 * 0.7) * ((100vw - 320px)/ 1920)) !important;
+    }
+
+    .sm-title {
+        font-size: calc(16px + (8 + 8 * 0.7) * ((100vw - 320px)/ 1920)) !important;
     }
 }
 
