@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="header__descr">
-                <span class="header__descr-subtitle">ваш ip партнер</span>
+                <span class="header__descr-subtitle all-txt">ваш ip партнер</span>
 
                 <h1 class="header__descr-title scnd-font" v-html="customTitle"></h1>
 
@@ -69,7 +69,6 @@ export default {
         row-gap: 8px;
 
         &-subtitle {
-            font-size: 15px;
             color: var(--main-gray);
             text-transform: uppercase;
         }

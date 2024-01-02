@@ -1,17 +1,23 @@
 <template>
+    <CasesHeader/>
 
-  <Case :customTitle="caseTitle"/>
+    <main class="main">
+        <Case :customTitle="caseTitle"/>
 
-  <Banner :customBannerImg="bannerIMG"/>
+        <Banner :customBannerImg="bannerIMG"/>
+    </main>
+
 </template>
 
 <script>
 import Banner from '@/components/HomeSections/Banner.vue'
 import Case from '@/components/HomeSections/Case.vue'
+import CasesHeader from '@/components/CasesPageSections/CasesHeader.vue'
 
 export default {
     name: 'Cases View',
     components: {
+        CasesHeader,
         Banner,
         Case
     },
@@ -26,5 +32,11 @@ export default {
 </script>
 
 <style lang="scss">
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 </style>
