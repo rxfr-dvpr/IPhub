@@ -2,7 +2,7 @@
   
   <Header/>
 
-  <!-- <main class="main">
+  <main class="main">
     <Advantages/>
 
     <Services/>
@@ -14,7 +14,7 @@
     <Team/>
 
     <Banner/>
-  </main> -->
+  </main>
 
 </template>
 
