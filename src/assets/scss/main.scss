@@ -37,7 +37,9 @@ button {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+
 
 .container {
     max-width: 1245px;
