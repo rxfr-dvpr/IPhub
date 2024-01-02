@@ -48,6 +48,7 @@
             {{ footerBottom.agreement }}
           </p>
         </div>
+
       </div>
     </div>
   </footer>
@@ -146,7 +147,6 @@ export default {
   .footer__top {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     gap: 35px;
 
@@ -200,6 +200,7 @@ export default {
       }
 
       &-link {
+        font-size: calc(14px + 2 * (100vw / 1920));
         transition: .4s;
 
         &:hover {
@@ -218,9 +219,37 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 30px;
 
     &-oferta, &-agreement {
       color: var(--primary-color);
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding: 50px 0 40px;
+
+    &__bottom {
+      text-align: center;
+      justify-content: center !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__top {
+    flex-direction: column;
+
+    .footer-brand {
+      flex-direction: column;
+    }
+
+    .footer-location {
+      text-align: start !important;
     }
   }
 }

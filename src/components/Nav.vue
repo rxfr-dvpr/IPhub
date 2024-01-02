@@ -222,6 +222,10 @@ export default {
         overflow: hidden;
         background: rgba($color: #fff, $alpha: .1);
     }
+
+    .open-btn {
+        margin: 0 !important;
+    }
 }
 
 @media (max-width: 500px) {
