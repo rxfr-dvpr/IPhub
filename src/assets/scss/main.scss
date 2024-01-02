@@ -106,6 +106,7 @@ html {
 
 .sm-title {
     font-size: calc(16px + 8 * (100vw / 1920));
+    font-weight: 400;
 
     &::first-letter {
         text-transform: uppercase;

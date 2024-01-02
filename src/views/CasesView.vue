@@ -6,6 +6,8 @@
 
         <Tasks/>
 
+        <Solution/>
+
         <Case :customTitle="caseTitle"/>
 
         <Banner :customBannerImg="bannerIMG"/>
@@ -19,6 +21,7 @@ import Case from '@/components/HomeSections/Case.vue'
 import CasesHeader from '@/components/CasesPageSections/CasesHeader.vue'
 import About from '@/components/CasesPageSections/About.vue'
 import Tasks from '@/components/CasesPageSections/Tasks.vue'
+import Solution from '@/components/CasesPageSections/Solution.vue'
 
 export default {
     name: 'Cases View',
@@ -26,6 +29,7 @@ export default {
         CasesHeader,
         About,
         Tasks,
+        Solution,
         Banner,
         Case
     },
