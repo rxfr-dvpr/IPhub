@@ -52,7 +52,7 @@ export default {
             &-txt {
                 max-width: 645px;
                 width: 100%;
-                font-size: 22px;
+                font-size: calc(16px + 6 * (100vw / 1920));
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -93,6 +93,12 @@ export default {
                 opacity: 1;
             }
         }
+    }
+}
+
+@media (min-width: 1920px) {
+    .error-txt {
+        font-size: 22px !important; 
     }
 }
 
