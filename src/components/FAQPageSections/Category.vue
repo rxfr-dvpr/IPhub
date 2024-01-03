@@ -311,31 +311,6 @@ export default {
 @media (max-width: 1050px) {
     .faq__list {
         &-item {
-            max-width: 450px !important;
-        }
-    }
-}
-
-@media (max-width: 975px) {
-    .category__section {
-        padding-bottom: 80px;
-    }
-
-    .faq__list {
-        justify-content: center;
-
-        &-item {
-            max-width: 350px !important;
-        }
-    }
-}
-
-@media (max-width: 755px) {
-    .faq__list {
-        flex-direction: column;
-        align-items: center;
-
-        &-item {
             max-width: 100% !important;
         }
     }
