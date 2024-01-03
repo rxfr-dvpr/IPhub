@@ -6,6 +6,8 @@
   <router-view/>
 
   <Footer/>
+
+  <span class="preload"><i class="far fa-spinner"></i></span>
 </template>
 
 <script>
@@ -17,6 +19,14 @@ export default {
   components: {
     Nav,
     Footer
+  },
+  mounted() {
+    document.querySelector('body').style.overflow = 'hidden'
+
+    setTimeout(() => {
+      document.querySelector('.preload').style.display = 'none'
+      document.querySelector('body').style.overflow = 'auto'
+    }, 2000)
   }
 }
 
@@ -35,6 +45,31 @@ export default {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+.preload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: var(--main-black);
+  z-index: 5055;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+
+  i {
+    animation: rotateIcon 1s infinite linear;
+  }
 }
 
 </style>
