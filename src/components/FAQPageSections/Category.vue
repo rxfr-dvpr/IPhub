@@ -177,8 +177,11 @@ export default {
 
     .categories__list {
         width: 100%;
+        min-width: 100%;
         display: flex;
-        align-items: center;
+        align-items: center; 
+        overflow-x: auto;
+        padding-bottom: 15px;
 
         .list-name {
             color: var(--main-gray);
@@ -192,6 +195,7 @@ export default {
             padding: 10px 15px;
             background: rgba(255, 255, 255, 0.05);
             transition: .4s;
+            min-width: max-content;
 
             &:hover {
                 color: var(--primary-color);
@@ -233,7 +237,7 @@ export default {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                font-size: 18px;
+                font-size: calc(14px + 4 * (100vw / 1920));
                 color: var(--main-gray);
                 gap: 20px;
                 border-radius: 8px;
@@ -279,8 +283,63 @@ export default {
     opacity: 0;
 }
 
+::-webkit-scrollbar {
+    height: 5px;
+    background: rgba($color: #0000, $alpha: .9);
+}
 
+@media (min-width: 1920px) {
+    .item-question {
+        font-size: 18px !important;
+    }
+}
 
+@media (max-width: 1240px) {
+    .faq__list {
+        &-item {
+            max-width: 500px !important;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .category__section {
+        padding-bottom: 120px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .faq__list {
+        &-item {
+            max-width: 450px !important;
+        }
+    }
+}
+
+@media (max-width: 975px) {
+    .category__section {
+        padding-bottom: 80px;
+    }
+
+    .faq__list {
+        justify-content: center;
+
+        &-item {
+            max-width: 350px !important;
+        }
+    }
+}
+
+@media (max-width: 755px) {
+    .faq__list {
+        flex-direction: column;
+        align-items: center;
+
+        &-item {
+            max-width: 100% !important;
+        }
+    }
+}
 
 
 </style>

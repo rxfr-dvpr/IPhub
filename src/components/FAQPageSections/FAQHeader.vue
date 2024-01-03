@@ -41,4 +41,14 @@ export default {
     }
 }
 
+@media (max-width: 480px) {
+    .faq-header {
+        padding: 35px 0;
+    }
+
+    .header-img {
+        display: none !important;
+    }
+}
+
 </style>
