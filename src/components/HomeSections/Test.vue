@@ -259,7 +259,7 @@ export default {
         row-gap: 25px;
 
         &-title {
-            font-size: 24px;
+            font-size: calc(18px + 6 * (100vw / 1920));
 
             &::first-letter {
                 text-transform: uppercase;
@@ -297,7 +297,7 @@ export default {
 
                 .bonus-txt {
                     max-width: 100%;
-                    font-size: 17px;
+                    font-size: calc(15px + 2 * (100vw / 1920));
                     overflow: hidden;
                     text-overflow: ellipsis;
                     display: -webkit-box;
@@ -338,7 +338,7 @@ export default {
                 gap: 15px;
 
                 .test-question {
-                    font-size: 22px;
+                    font-size: calc(16px + 6 * (100vw / 1920));
 
                     &::first-letter {
                         text-transform: uppercase;
@@ -346,7 +346,7 @@ export default {
                 }
 
                 .test-num {
-                    font-size: 36px;
+                    font-size: calc(26px + 10 * (100vw / 1920));
                     font-family: var(--scnd-font);
 
                     .active-num {
@@ -453,9 +453,90 @@ export default {
     }
 }
 
+@media (min-width: 1920px) {
+    .test-question {
+        font-size: 22px !important;
+    }
+
+    .test-num {
+        font-size: 36px !important;
+    }
+
+    .bonuses__content-title {
+        font-size: 24px !important;
+    }
+
+    .bonus-txt {
+        font-size: 17px !important;
+    }
+}
+
 @media (min-width: 1100px) {
     .test-img {
         visibility: visible !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    .test__section {
+        padding: 120px 0;
+    }
+}
+
+@media (max-width: 1065px) {
+    .test__options {
+        justify-content: center;
+        &-item {
+            padding: 15px !important;
+            max-width: 400px !important;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .test__descr {
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .bonuses__content {
+        align-items: center;
+        text-align: center;
+
+        .bonus__cards {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .test__options {
+        &-item {
+            max-width: 350px !important;
+        }
+    }
+}
+
+@media (max-width: 825px) {
+    .test__options {
+        &-item {
+            max-width: 300px !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .test__section {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 486px) {
+    .bonus__cards {
+        &-item {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 
