@@ -73,4 +73,27 @@ export default {
     }
 }
 
+@media (max-width: 1065px) {
+    .banner-img {
+        max-width: 300px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .row {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .banner__descr {
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner-img {
+        display: none !important;
+    }
+}
+
+
 </style>
