@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
 
-                <swiper class="sponsors-swiper" :slidesPerView="3.9" :spaceBetween="30" :loop="true" :centeredSlides="true">
+                <swiper class="sponsors-swiper" :spaceBetween="20" :breakpoints="breakView" :loop="true">
                     <swiper-slide class="sponsors-swiper-slide" v-for="(img, idx) in slides" :key="idx">
                         <img :src="img.img" alt="" class="sponsors-img">
                     </swiper-slide>
@@ -45,7 +45,21 @@ export default {
                 {
                     img: 'https://firebasestorage.googleapis.com/v0/b/iphub-ef5c9.appspot.com/o/ServicesPage%2FSponsorsSection%2Fmone.svg?alt=media&token=b80b7c3c-0ec4-4ea4-9eec-0290dd3761b5'
                 },
-            ]
+            ],
+            breakView: {
+                '992': {
+                    slidesPerView: 3.8
+                },
+                '668': {
+                    slidesPerView: 2.5
+                },
+                '576': {
+                    slidesPerView: 2.2
+                },
+                '320': {
+                    slidesPerView: 1.3
+                },
+            }
         }
     }
 }
