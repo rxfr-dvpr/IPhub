@@ -1,5 +1,6 @@
 <template>
-    <swiper class="services-slider" :spaceBetween="20" :slidesPerView="3"  :modules="modules" 
+    <swiper class="services-slider" :spaceBetween="20" 
+    :breakpoints="breakpointsView"  :modules="modules" 
     :navigation="{prevEl:'.services-swiper-btn.prev', nextEl:'.services-swiper-btn.next'}">
         <swiper-slide class="services-slider-slide" v-for="(slide, idx) in slides" :key="idx">
             <span class="arrow-icon"><i class="fal fa-arrow-right"></i></span>
@@ -63,6 +64,23 @@ export default {
                 },
             ],
             modules: [Navigation],
+            breakpointsView: {
+                '500': {
+                    slidesPerView: 1.8,
+                },
+                '610': {
+                    slidesPerView: 2.2,
+                },
+                '768': {
+                    slidesPerView: 2.8,
+                },
+                '992': {
+                    slidesPerView: 3.5,
+                },
+                '1140': {
+                    slidesPerView: 4,
+                },
+            }
         }
     }
 }
@@ -75,7 +93,6 @@ export default {
     width: 100%;
 
     &-slide {
-        max-width: 300px;
         width: 100%;
         height: auto;
         display: flex;
@@ -107,7 +124,7 @@ export default {
         }
 
         .slide-title {
-            font-size: 18px;
+            font-size: calc(15px + 3 * (100vw / 1920));
             font-weight: 500;
             color: var(--main-gray);
             transition: .4s;
@@ -201,6 +218,18 @@ export default {
         &:not(.swiper-button-disabled):hover.next .btn-icon {
             right: -15px;
         }
+    }
+}
+
+@media (min-width: 1920px) {
+    .slide-title {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .slide-img {
+        max-width: 145px !important;
     }
 }
 

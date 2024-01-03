@@ -73,4 +73,40 @@ export default {
     }
 }
 
+@media (max-width: 992px) {
+
+    .services__section {
+        padding: 120px 0;
+    }
+
+    .services__descr {
+        &-txt {
+            max-width: 600px !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .services__section {
+        padding: 80px 0;
+    }
+
+    .services__descr {
+        &-txt {
+            max-width: 480px !important;
+        }
+
+        .srvc-link {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .services__descr {
+        align-items: center;
+        text-align: center;
+    }
+}
+
 </style>
