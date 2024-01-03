@@ -46,6 +46,8 @@ export default {
     overflow: hidden;
     padding: 40px;
     justify-content: space-between;
+    flex-wrap: unset;
+    gap: 35px;
   }
 
   .header__descr {
@@ -56,6 +58,7 @@ export default {
     row-gap: 15px;
 
     &-subtitle {
+      font-size: 15px;
       color: var(--main-gray);
       text-transform: uppercase;
     }
@@ -65,6 +68,31 @@ export default {
     max-width: 200px;
     width: 100%;
     margin-right: 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .row {
+    padding: 30px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .cases-header {
+    padding: 60px 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cases-header {
+    &-img {
+      display: none !important;
+    }
+  }
+
+  .header__descr {
+    align-items: center;
+    text-align: center;
   }
 }
 

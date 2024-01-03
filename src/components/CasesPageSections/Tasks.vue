@@ -59,6 +59,7 @@ export default {
     .row {
         justify-content: space-between;
         gap: 35px;
+        align-items: flex-end;
     }
 
     .tasks__descr {
@@ -80,6 +81,7 @@ export default {
     .tasks-img {
         max-width: 365px;
         width: 100%;
+        height: max-content !important;
         filter: grayscale(100%);
         -webkit-filter: grayscale(100%);
         border-radius: 10px;
@@ -91,12 +93,10 @@ export default {
     .product-images {
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
         gap: 20px;
 
         &-item {
-            max-width: 340px;
+            max-width: 300px;
             width: 100%;
             object-fit: cover;
             filter: grayscale(100%);
@@ -114,6 +114,46 @@ export default {
         .tasks-img {
             filter: grayscale(0%);
             -webkit-filter: grayscale(0%);
+        }
+    }
+}
+
+
+@media (max-width: 1140px) {
+    .tasks-img {
+        max-width: 250px !important;
+    }
+
+    .tasks__descr {
+        max-width: 650px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .tasks-img {
+        display: none !important;
+    }
+
+    .tasks__descr {
+        max-width: 100% !important;
+    }
+
+    .product-images {
+        justify-content: center;
+        
+        &-item {
+            max-width: 360px !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .product-images {
+        flex-wrap: wrap;
+        
+        &-item {
+            max-width: 250px !important;
         }
     }
 }

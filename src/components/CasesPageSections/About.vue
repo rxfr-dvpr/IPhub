@@ -71,4 +71,10 @@ export default {
     }
 }
 
+@media (max-width: 1000px) {
+    .about-img, .about__descr {
+        max-width: 600px !important;
+    }
+}
+
 </style>

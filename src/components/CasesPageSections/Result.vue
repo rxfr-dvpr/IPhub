@@ -74,7 +74,6 @@ export default {
             object-fit: cover;
             border-radius: 10px;
             overflow: hidden;
-            margin: 0 auto;
             filter: grayscale(100%);
             -webkit-filter: grayscale(100%);
             transition: .4s;
@@ -87,7 +86,12 @@ export default {
             }
         }
     }
+}
 
+@media (max-width: 886px) {
+    .result__section {
+        padding-bottom: 0 !important;
+    }
 }
 
 </style>

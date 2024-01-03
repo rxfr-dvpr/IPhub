@@ -200,15 +200,15 @@ export default {
         .slide-img-box {
             max-width: 100% !important;
             height: 100%;
-            padding: 40px 0 !important;
+            padding: 30px 0 !important;
 
             .slide-img {
-                max-width: 200px;
+                max-width: 150px;
             }
         }
 
         .slide-descr {
-            padding: 35px 15px !important;
+            padding: 30px 15px !important;
         }
 
         .arrow-icon {
