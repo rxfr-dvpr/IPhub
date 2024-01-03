@@ -26,7 +26,7 @@ export default {
     setTimeout(() => {
       document.querySelector('.preload').style.display = 'none'
       document.querySelector('body').style.overflow = 'auto'
-    }, 2000)
+    }, 3000)
   }
 }
 
