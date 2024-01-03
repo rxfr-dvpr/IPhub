@@ -1,5 +1,5 @@
 <template>
-    <swiper class="case-slider" :spaceBetween="20" :slidesPerView="2"  :modules="modules" :navigation="{prevEl:'.case-swiper-btn.prev', nextEl:'.case-swiper-btn.next'}">
+    <swiper class="case-slider" :spaceBetween="20" :breakpoints="breakViews"  :modules="modules" :navigation="{prevEl:'.case-swiper-btn.prev', nextEl:'.case-swiper-btn.next'}">
         <swiper-slide class="case-slider-slide" v-for="(slide, idx) in slides" :key="idx">
 
             <div class="slide-img-box">
@@ -54,6 +54,14 @@ export default {
                 },
             ],
             modules: [Navigation],
+            breakViews: {
+                '992': {
+                  slidesPerView: 2,
+                },
+                '867': {
+                  slidesPerView: 1.5,
+                },
+            }
         }
     }
 }
@@ -66,7 +74,6 @@ export default {
     width: 100%;
     
     &-slide {
-        max-width: 600px;
         width: 100%;
         height: auto;
         display: flex;
@@ -88,6 +95,7 @@ export default {
             transition: .4s;
 
             .slide-img {
+                width: 100%;
                 display: block;
             }
         }
@@ -173,6 +181,41 @@ export default {
 
         &:not(.swiper-button-disabled):hover.next .btn-icon {
             right: -15px;
+        }
+    }
+}
+
+@media (max-width: 668px) {
+    .slide-img-box {
+        max-width: 230px !important;
+        padding: 0 30px !important; 
+    }
+}
+
+@media (max-width: 576px) {
+    .case-slider-slide {
+        flex-direction: column;
+        position: relative;
+
+        .slide-img-box {
+            max-width: 100% !important;
+            height: 100%;
+            padding: 40px 0 !important;
+
+            .slide-img {
+                max-width: 200px;
+            }
+        }
+
+        .slide-descr {
+            padding: 35px 15px !important;
+        }
+
+        .arrow-icon {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 25px !important;
         }
     }
 }

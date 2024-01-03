@@ -71,4 +71,52 @@ export default {
     }
 }
 
+@media (max-width: 1000px) {
+    .case__section {
+        padding: 120px 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .case__descr-txt {
+        max-width: 500px !important;
+    }
+
+    .case-link {
+        bottom: 50% !important;
+    }
+}
+
+@media (max-width: 786px) {
+    .case__section {
+        padding: 80px 0;
+    }
+
+    .case__descr-txt {
+        max-width: 400px !important;
+    }
+}
+
+@media (max-width: 568px) {
+
+    .case__descr-txt {
+        max-width: 300px !important;
+    }
+}
+
+@media (max-width: 486px) {
+    .case-link {
+        display: none !important;
+    }
+
+    .case__descr {
+        align-items: center;
+        text-align: center;
+
+        &-txt {
+            max-width: 100% !important;
+        }
+    }
+}
+
 </style>
