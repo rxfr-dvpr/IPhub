@@ -57,7 +57,6 @@ export default {
     .info__cards {
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
         gap: 20px;
 
         &-item {
@@ -78,12 +77,34 @@ export default {
             linear-gradient(340deg, transparent 60%, #da4533 100%);
 
             .card-name {
-                font-size: 17px;
+                font-size: calc(15px + 2 * (100vw / 1920));
 
                 &::first-letter {
                     text-transform: uppercase;
                 }
             }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .card-name {
+        font-size: 17px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .info__section {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info__cards {
+        flex-direction: column;
+
+        &-item {
+            max-width: 500px !important;
         }
     }
 }
