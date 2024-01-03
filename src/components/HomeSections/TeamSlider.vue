@@ -1,5 +1,5 @@
 <template>
-    <swiper class="team__slider" :spaceBetween="20" :slidesPerView="4"  :modules="modules" 
+    <swiper class="team__slider" :spaceBetween="20" :breakpoints="breakViews"  :modules="modules" 
     :navigation="{prevEl:'.team-swiper-btn.prev', nextEl:'.team-swiper-btn.next'}">
         <swiper-slide class="team__slider-slide" v-for="(slide, idx) in slides" :key="idx">
 
@@ -63,6 +63,20 @@ export default {
                 },
             ],
             modules: [Navigation],
+            breakViews: {
+                '1000': {
+                    slidesPerView: 4,
+                },
+                '768': {
+                    slidesPerView: 3,
+                },
+                '480': {
+                    slidesPerView: 2,
+                },
+                '375': {
+                    slidesPerView: 1.3,
+                }
+            }
         }
     }
 }
@@ -75,7 +89,6 @@ export default {
     width: 100%;
 
     &-slide {
-        max-width: 290px;
         width: 100%;
         display: flex;
         flex-direction: column;

@@ -57,4 +57,16 @@ export default {
     }
 }
 
+@media (max-width: 1000px) {
+    .team__section {
+        padding: 120px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .team__section {
+        padding: 80px 0;
+    }
+}
+
 </style>
